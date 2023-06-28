@@ -1,0 +1,79 @@
+
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    color: silver;
+    text-align: center;
+}
+
+.registration_form{
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    min-width: 400px;
+    height:430px;
+    border-radius: 40px;
+    border: 5px dashed silver;
+    transition: 0.5s;
+}
+.registration_form:hover{
+    border: 10px solid silver;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.registration_form input{
+    margin: 20px;
+    width: 300px;
+    height: 30px;
+    text-align: center !important;
+    border-radius: 30px;
+    transition: 0.7s;
+}
+
+.registration_form input:hover{
+    border-radius: 5px;
+    background-color: black;
+    font-family: cursive;
+    color: aliceblue;
+    transition: 0.7s;
+}
+.button{
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 5px dashed silver;
+    transition: 0.5s;
+}
+.button:hover{
+    border: 10px solid rgb(29, 211, 29);
+    background-color: black;
+    color: aliceblue;
+    transition: 0.5s;
+}
+.sign_in{
+    text-decoration: none;
+    color: rgb(148, 172, 193);
+    transition: 0.5s;
+}
+.sign_in:hover{
+    color: green;
+    transition: 0.5s;
+}
+.sign_info{
+    color: aliceblue;
+}
+
+.error_msg{
+    color: silver;
+    margin: 0;
+}
