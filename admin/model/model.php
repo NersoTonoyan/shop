@@ -1,7 +1,7 @@
 <?php
 class admin{
     public $conn;
-
+    
     public function __construct(){
         $this -> conn = mysqli_connect('localhost', 'root','','shop'); 
         

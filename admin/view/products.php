@@ -8,15 +8,11 @@ if(isset($_GET['catId'])){
 }
 
 ?>
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Products</title>
+	<link rel="stylesheet" href="../assets/css/products.css">
 </head>
 <body>
 
