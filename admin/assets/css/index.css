@@ -21,6 +21,7 @@ body{
     display: flex;
     justify-content: space-around;
     margin-top: 50px !important;
+    flex-direction: column;
 }
 
 .table{

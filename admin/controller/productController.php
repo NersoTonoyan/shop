@@ -51,7 +51,7 @@ if($action == 'save_form_details'){
 	$vProdName = $_POST['vProdName'];
 	$iProdPrice = $_POST['iProdPrice'];
 	$vProdDesc = $_POST['vProdDesc'];
-	$vProdStatus = $_POST['vProdStatus'];
+	$vProdStatus = $_POST['eStatus'];
 
 	$image_name = $_FILES['vProdImage']['name'];
 	$image_tmp  = $_FILES['vProdImage']['tmp_name'];

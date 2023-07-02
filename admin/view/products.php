@@ -22,21 +22,16 @@ if(isset($_GET['catId'])){
 	<form action="../controller/productController.php" method="post" enctype="multipart/form-data">
 		<div class = 'add_product_container'>
 		<div>
-			<label for="prodName">Name</label>
-			<input type="text" name="prodName" class="prodName">
-			
+			<input type="text" name="prodName" class="prodName" placeholder="Name">
 		</div>
 		<div>
-			<label for="prodPrice">Price</label>
-			<input type="text" name="prodPrice" class="prodPrice">
+			<input type="text" name="prodPrice" class="prodPrice" placeholder="Price">
 		</div>
 		<div>
-			<label for="prodDesc">Description</label>
-			<textarea name="prodDesc" class="prodDesc"></textarea>
+			<textarea name="prodDesc" class="prodDesc" placeholder="Description"></textarea>
 		</div>
 		<div>
-			<label for="prodImage">Image</label>
-			<input type="file" name="prodImage" class="prodImage">
+			<input type="file" name="prodImage" class="prodImage" placeholder="Image">
 		</div>
 
 		<input type="hidden" name="catId" value="<?=$catId?>">
