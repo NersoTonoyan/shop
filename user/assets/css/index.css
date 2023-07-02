@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../images/fon2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: space-between !important;
+
+}
+
+
+.nav_g .navbar{
+    display: flex!important;
+    flex-direction: row;
+    justify-content: space-between !important;
+}
+.nav_g .navbar a {
+    margin: 25px;
+    color: orange;
+    font-size: 25px;
+    font-family: fantasy;
+    font-weight: 400;
+    display: block;
+}
+
+
+.info{
+    display: flex;
+    width: 500px;
+    height: 250px;
+    color: orange;
+    background-color: beige;
+    filter: opacity(40%);
+    text-align: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: 1.5s;
+}
+.info p {
+    margin: 0 auto;
+    font-weight: bolder;
+    filter: opacity(100%) !important;
+}
+.info:hover{
+    filter: opacity(100%);
+    border-radius: 15px;
+    transition: 1.5s;
+}

@@ -8,10 +8,13 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <link rel="stylesheet" href="../assets/css/reg.css">
+	<title>Registration</title>
 </head>
 <body>
-<form action="../controller/userRegisterController.php" method="post">
+	<h1>Գրանցում</h1>
+	<div class="container">
+	<form action="../controller/userRegisterController.php" method="post">
 		<div>
 				<input type="text" name="name" id="name" placeholder="Enter Name">
 		</div>
@@ -25,24 +28,24 @@ session_start();
 		</div>
 
 		<div>
-			<label for="phone"> 
-				<input type="text" name="phone" id="phone" placeholder="Enter phone">
-			</label>	
+				<input type="text" name="phone" id="phone" placeholder="Enter phone">	
 		</div>
 
 		<div>
-			<label for="password"> 
 				<input type="password" name="password" id="password" placeholder="Enter password">
-			</label>	
 		</div>
 
 		<div>
-				<input type="confPass" name="confPass" id="confPass" placeholder="Confirm password">
+				<input type="password" name="confPass" id="confPass" placeholder="Confirm password">
 		</div>
 		
-		<button type="submit" name="action" value="submit">Register</button>
+		<div>
+			<button type="submit" name="action" value="submit" class="button">Register</button>
+		</div>
+
 	</form>
 
+	</div>
     <?php
         if (isset($_SESSION['error'])) {
             echo $_SESSION['error'];
@@ -51,7 +54,7 @@ session_start();
     ?>
 
     <div>
-        <p>If already has account please <a href="userLogin.php">LogIn</a> </p>
+        <p>Եթե գրանցված եք կարող եք  <a href="userLogin.php"> Մուտք գործել</a> </p>
     </div>
 
 

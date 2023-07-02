@@ -21,28 +21,34 @@ if (!empty($action) && $action == 'submit') {
 
     if (empty($name) || empty($surName) || empty($confPass) || empty($phone)) {
         $_SESSION['error'] = "Please fill all fields";
-        header('location:../view/registration.php');
+        header('location:../view/userRegister.php');
     }else{
         if (!preg_match($regName,$name)) {
             $_SESSION['error'] = 'Please enter valid Name';
+            header('location:../view/userRegister.php');
         }
         if (!preg_match($regSurName,$surName)) {
             $_SESSION['error'] = 'please enter valid surname';
+            header('location:../view/userRegister.php');
         }
         if (!preg_match($regMail,$mail)) {
             $_SESSION['error'] = 'please enter valid Email';
+            header('location:../view/userRegister.php');
         }
         if(!preg_match($regPass,$pass)){
 
 			$_SESSION['error'] = 'Please enter valid Password';
+            header('location:../view/userRegister.php');
 		}
 
 		if(!preg_match($regPhone, $phone)){
 			$_SESSION['error'] = 'Please fill valid phone number';
+            header('location:../view/userRegister.php');
 		}
 
 		if($pass!=$confPass){
 			$_SESSION['error'] = "Passwords doesn't match";
+            header('location:../view/userRegister.php');
 		}else{
             $check_user = $admin->check_user($mail);
 
@@ -54,12 +60,12 @@ if (!empty($action) && $action == 'submit') {
                     header('location:../view/userLogin.php');die;
                 }else{
                     $_SESSION['error'] = "Can't create user";
+                    header('location:../view/userRegister.php');
                 }
             }
         }
         header('location:../view/userRegister.php');
     }
-
 }
 
 

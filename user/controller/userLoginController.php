@@ -12,14 +12,14 @@ if (isset($_POST['action']) && $_POST['action'] == 'login') {
         if ($check_user_login > 0) {
             $_SESSION['userEmail'] = $email;
             $returnArr['Action']   = '1';
-            $returnArr['message']  = 'You are logged in';
+            $returnArr['message']  = 'Դուք մուտք գործեցիք';
         }else{
             $returnArr['Action']  = '0';
-            $returnArr['message'] = 'Nman user chi gtnvel';
+            $returnArr['message'] = 'Նման օգտատեր գոյություն չունի';
         }
     }else{
         $returnArr['Action']  = '0';
-        $returnArr['message'] = 'mutqagreq bolor tvyalnery';
+        $returnArr['message'] = 'Մուտքագրեք բոլոր տվյալները';
     }
 
     echo json_encode($returnArr);exit;

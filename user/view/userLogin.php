@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 <body>
-    <form method="post">
-        <input type="email" name="email" class="email" placeholder="Enter email">
-        <input type="password" name="password" class="password" placeholder="Enter password">
-        
-    </form>
-    <button name="action" class="login" value="submit">log In</button>
+    <h1>մուտք</h1>
+    <div class="container">
+        <form method="post" action="../controller/userLoginController.php">
+            <input type="email" name="email" class="email" placeholder="Enter email">
+            <input type="password" name="password" class="password" placeholder="Enter password">
+            
 
+        </form>
+    <button name="action" class="login" value="submit">Մուտք</button>
+    </div>
     <div class="alert alert-success" role="alert" style="display:none;"></div>
     <div class="alert alert-danger" role="alert" style="display:none;" ></div>
 
@@ -38,7 +42,7 @@
                             action:'login'
                         },
                         success:function(data){
-                            if(data['Action'] == '1'){
+                            if(data['Action'] === '1'){
                                 console.log(data);
                                 $('.alert-success').html(data['message']);
                                 $('.alert-success').fadeIn();

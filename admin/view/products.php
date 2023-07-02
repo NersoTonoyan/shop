@@ -18,6 +18,7 @@ if(isset($_GET['catId'])){
 
 <a href="../index.php" class="btn btn-primary">Go Back</a>
 
+	<div class="add_prod">
 	<form action="../controller/productController.php" method="post" enctype="multipart/form-data">
 		<div class = 'add_product_container'>
 		<div>
@@ -43,6 +44,7 @@ if(isset($_GET['catId'])){
 	</div>
 	<button type="submit" class="btn btn-primary" name="action" value="addProduct">Add</button>
 
+	</div>
 	<?php 
 		if(isset($_SESSION['status'])){
 			if($_SESSION['status'] == 'success'){ ?>

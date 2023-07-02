@@ -3,6 +3,7 @@ body{
     color: orange !important;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 .table{
@@ -12,4 +13,16 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-around;
+}
+.display_categories_container{
+    width: 80% !important;
+    margin: 0 !important;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px !important;
+}
+
+.table{
+    width: 100% !important;
 }
